@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Оксана Жук](https://up.htmlacademy.ru/adaptive/14/user/614941).
-* Наставник: `Неизвестно`.
+* Наставник: [Сэр Роберт Томпсон](https://htmlacademy.ru/profile/id42701).
 
 ---
 
