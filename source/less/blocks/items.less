@@ -1,3 +1,41 @@
 .items {
-  margin-top: 24px;
+  width: 320px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  outline: 2px solid pink;
+}
+
+.items__list {
+  height: 1673px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  outline: 2px solid green;
+}
+
+@media (min-width: @tablet-width) {
+  .items {
+    width: 708px;
+    padding-top: 162px;
+  }
+  .items__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 708px;
+    height: 2145px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .items {
+    width: 1220px;
+  }
+  .items__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1220px;
+    height: 1005px;
+  }
 }

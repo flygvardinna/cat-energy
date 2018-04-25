@@ -1,9 +1,30 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Oswald";
+  font-style: normal;
+  src: url("fonts/oswaldregular.woff2") format("woff2"), url("fonts/oswaldregular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Oswald";
+  font-style: normal;
+  src: url("fonts/oswaldmedium.woff2") format("woff2"), url("fonts/oswaldmedium.woff") format("woff");
+}
+
 body {
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
 
   background-color: #ffffff;
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    position: relative;
+    width: 1440px;
+  }
 }
 
 a {
@@ -16,12 +37,16 @@ img {
 }
 
 .page-main {
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
   padding: 0;
+  outline: 2px solid yellow;
 }
 
 .page-title {
+  margin: 0;
   padding-top: 17px;
+  padding-bottom: 27px;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -96,4 +121,46 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main {
+    width: 768px;
+  }
+  .page-main--inner {
+    width: 708px;
+    padding: 0 30px;
+  }
+  .page-title {
+    margin: 0;
+    padding-top: 37px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    font-size: 60px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    width: 1440px;
+    padding: 0;
+  }
+  .page-main--inner {
+    width: 1300px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .page-title {
+    margin: 0;
+    padding-top: 49px;
+    padding-left: 0;
+    padding-right: 0;
+
+    font-size: 60px;
+    font-weight: 400;
+  }
 }

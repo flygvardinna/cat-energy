@@ -3,7 +3,6 @@
   min-height: 289px;
   margin: 0 auto;
   margin-bottom: 35px;
-
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -16,10 +15,27 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: auto;
+  outline: 2px solid brown;
 }
 
 .special-offer__description {
   width: 170px;
   margin: 0 auto;
   padding-top: 190px;
+}
+
+@media (min-width: @tablet-width) {
+  .special-offer {
+    width: 708px;
+    height: 200px;
+    margin-bottom: 76px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .special-offer {
+    width: 245px;
+    height: 288px;
+    margin-bottom: 0;
+  }
 }

@@ -1,5 +1,6 @@
 .promo {
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
   margin-bottom: 22px;
   padding: 0;
 
@@ -8,11 +9,20 @@
   color: #ffffff;
   text-align: center;
 
-  background-color: #ffffff;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: auto;
+
+  outline: 2px solid yellow;
+}
+
+.promo__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  outline: 2px solid pink;
 }
 
 .promo__title {
@@ -37,4 +47,111 @@
   margin: 0;
   margin-top: 20px;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    position: relative;
+    width: 708px;
+
+    background-image: none;
+    outline: 2px solid brown;
+  }
+  .promo__wrapper {
+    width: 708px;
+    padding: 0;
+    outline: 2px solid blue;
+  }
+
+  .promo__title {
+    width: 420px;
+    margin-left: 90px;
+    margin-bottom: 39px;
+    padding-top: 37px;
+
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    color: #111111;
+    text-align: left;
+  }
+  .promo__slogan {
+    display: block;
+    width: 420px;
+    margin-left: 90px;
+
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #111111;
+    text-align: left;
+  }
+  .promo__product-image {
+    width: 708px;
+    height: 609px;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+  }
+  .promo__button {
+    position: absolute;
+    top: 263px;
+    left: 120px;
+
+    width: 245px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    position: relative;
+    width: 1440px;
+    min-height: 696px;
+    margin-bottom: 80px;
+    padding: 0;
+
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-position: right;
+    background-size: 720px 696px;
+  }
+
+  .promo__wrapper {
+    width: 1220px;
+    min-height: 641px;
+    padding: 0 110px;
+    outline: 2px solid blue;
+  }
+  .promo__title {
+    margin-left: 80px;
+    padding-top: 225px;
+  }
+  .promo__slogan {
+    margin-left: 80px;
+    margin-top: 54px;
+  }
+  .promo__product-image {
+    position: absolute;
+    top: 142px;
+    right: 327px;
+    z-index: 2;
+
+    width: 552px;
+    height: 499px;
+    margin: 0;
+    padding: 0;
+  }
+  .promo__button {
+    position: relative;
+    left: -407px;
+    top: 52px;
+    /*top: 456px;
+    left: 190px;*/
+  }
 }
