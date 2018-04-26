@@ -1,5 +1,8 @@
 .before-after {
-  margin: 0;
+  box-sizing: border-box;
+  width: 320px;
+  min-height: 705px;
+  margin: 0 auto;
   padding: 0;
   padding-bottom: 32px;
 
@@ -11,6 +14,14 @@
   text-align: left;
 
   background-color: #f2f2f2;
+  outline: 2px solid yellow;
+}
+
+.before-after__wrapper {
+  width: 280px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  outline: 2px solid pink;
 }
 
 .before-after__title {
@@ -23,6 +34,7 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 60px;
+  font-weight: 400;
   color: #111111;
 }
 
@@ -129,3 +141,90 @@
   background-position: center;
   background-repeat: no-repeat;
 }*/
+
+@media (min-width: @tablet-width) {
+  .before-after {
+    box-sizing: border-box;
+    width: 768px;
+    height: 1081px;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 67px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    background-color: #ffffff;
+  }
+
+  .before-after__wrapper {
+    width: 708px;
+    height: 1014px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .before-after__title {
+    margin: 0;
+    /*margin-bottom: 22px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 25px;*/
+
+    font-size: 60px;
+  }
+
+  .before-after__figure {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .before-after__action {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .before-after__cost {
+    /*display: inline-block;
+    margin: 0 auto 35px;
+    padding-left: 20px;
+    padding-right: 25px;*/
+
+    font-size: 20px;
+  }
+
+  .before-after__cat-picture {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+
+  .before-after__buttons {
+    position: relative;
+
+    margin: 0;
+
+    background-image: url("../img/before-after-scale.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .before-after__button {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .before-after {
+    box-sizing: border-box;
+    width: 1440px;
+    height: 652px;
+  }
+
+  .before-after__wrapper {
+    width: 1300px;
+    height: 652px;
+    box-sizing: border-box;
+    padding: 0 40px;
+  }
+}

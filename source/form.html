@@ -2,17 +2,20 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи. Подбор программы</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
-      </a>
+      <div class="page-header__topbar">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+        </a>
+        <button class="page-header__nav-toggle visually-hidden" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="main-nav">
         <button class="main-nav__toggle visually-hidden" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="index.html">Главная</a>
@@ -20,14 +23,13 @@
             <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--active" href="form.html">Подбор программы</a>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
-        </div>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page-main page-main--inner">
 
       <h1 class="page-title">Подбор программы</h1>
 
@@ -109,15 +111,15 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts">
-          <div class="contacts__info">
-            <h2 class="visually-hidden">Контакты</h2>
-            <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</p>
-          </div>
-          <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта, где отмечен адрес ул. Большая Конюшенная, д. 19/8">
+      <div class="page-footer__contacts contacts">
+        <div class="contacts__info">
+          <h2 class="visually-hidden">Контакты</h2>
+          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</p>
         </div>
+        <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта, где отмечен адрес ул. Большая Конюшенная, д. 19/8">
+      </div>
+      <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <a class="page-footer__logo-link" href="index.html">
             <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">

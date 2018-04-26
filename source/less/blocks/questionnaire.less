@@ -1,9 +1,11 @@
 .questionnaire {
   text-align: left;
+  padding-top: 25px;
+  outline: 2px solid pink;
 }
 
 .questionnaire__intro {
-  margin-top: 25px;
+  /*margin-top: 25px;*/
   margin-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -19,7 +21,7 @@
 .questionnaire__wrapper {
   margin: 0;
   padding-top: 0;
-  padding-bottom: 35px;
+  padding-bottom: 32px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -43,4 +45,36 @@
   color: #444444;
 
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .questionnaire {
+    width: 633px;
+    height: 1699px;
+    padding-left: 40px;
+    padding-right: 35px;
+    padding-top: 53px;
+  }
+
+  .questionnaire__intro {
+    margin: 0;
+    padding: 0;
+  }
+
+  .questionnaire__wrapper {
+    padding: 0;
+    padding-bottom: 72px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .questionnaire {
+    width: 1220px;
+    height: 1303px;
+    padding: 0;
+  }
+
+  .questionnaire__wrapper {
+    padding-bottom: 83px;
+  }
 }

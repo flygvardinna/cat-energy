@@ -1,4 +1,6 @@
 .item {
+  height: 209px;
+  box-sizing: border-box;
   margin: 0;
   padding-bottom: 24px;
   padding-left: 20px;
@@ -48,4 +50,19 @@
 
 .item__value {
   text-align: right;
+}
+
+@media (min-width: @tablet-width) {
+  .item {
+    width: 324px;
+    height: 431px;
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .item {
+    width: 245px;
+    height: 432px;
+  }
 }

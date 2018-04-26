@@ -1,0 +1,264 @@
+.categories {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+
+  background-color: #ffffff;
+  outline: 2px solid yellow;
+}
+
+.categories__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;
+  height: 552px;
+  margin: 0;
+  padding: 0 20px;
+
+  list-style: none;
+  outline: 2px solid pink;
+}
+
+.categoties__item {
+  position: relative;
+
+  height: 266px;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 31px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: #f2f2f2;
+}
+
+/*.categoties__item--slim {
+  margin-bottom: 20px;
+}*/
+
+.categoties__item--slim::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 35px;
+  height: 49px;
+
+  background-image: url("../img/icon-cat-slim.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.categoties__item--pro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 67px;
+  height: 28px;
+
+  background-image: url("../img/icon-cat-pro.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.categories__title {
+  margin: 0 auto;
+  margin-bottom: 28px;
+  padding-left: 71px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.categories__description {
+  margin: 0;
+  padding-bottom: 22px;
+
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #444444;
+  text-align: left;
+
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.categories__catalog-link {
+  display: inline-block;
+  padding-top: 19px;
+  padding-bottom: 22px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #111111;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .categories {
+    width: 708px;
+    /*padding: 0 30px;*/
+  }
+
+  .categories__list {
+    width: 708px;
+    height: 774px;
+    margin: 0;
+    padding: 0;
+    outline: 2px solid pink;
+  }
+
+  .categoties__item {
+    position: relative;
+
+    height: 372px;
+    margin: 0;
+    padding-top: 78px;
+    padding-left: 52px;
+    padding-right: 52px;
+
+    background-color: #f2f2f2;
+  }
+
+  .categoties__item--slim::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 476px;
+
+    width: 140px;
+    height: 194px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .categoties__item--pro::before {
+    content: "";
+    position: absolute;
+    top: 135px;
+    left: 412px;
+
+    width: 268px;
+    height: 112px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .categories__title {
+    margin-bottom: 22px;
+    padding-left: 0;
+
+    font-size: 36px;
+  }
+
+  .categories__description {
+    width: 384px;
+    margin-bottom: 58px;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border-bottom: none;
+
+    &--pro {
+      width: 343px;
+    }
+  }
+
+  .categories__catalog-link {
+    padding-top: 0;
+    padding-bottom: 61px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .categories {
+    width: 1220px;
+    padding: 0 40px;
+  }
+
+  .categories__list {
+    flex-direction: row;
+    width: 1220px;
+    height: 372px;
+    margin: 0;
+    padding: 0;
+    outline: 2px solid pink;
+  }
+
+  .categoties__item {
+    position: relative;
+
+    width: 570px;
+  }
+
+  .categoties__item--slim::before {
+    content: "";
+    position: absolute;
+    top: 41px;
+    left: 66px;
+
+    width: 70px;
+    height: 97px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .categoties__item--pro::before {
+    content: "";
+    position: absolute;
+    top: 69px;
+    left: 34px;
+
+    width: 134px;
+    height: 56px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .categories__title {
+    margin-bottom: 71px;
+    padding-left: 164px;
+
+    font-size: 36px;
+  }
+
+  .categories__description {
+    width: 466px;
+    margin-bottom: 33px;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border-bottom: none;
+
+    &--pro {
+      width: 466px;
+    }
+  }
+}
