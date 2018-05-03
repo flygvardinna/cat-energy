@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
   background-size: auto;
 
-  outline: 2px solid yellow;
+  /*outline: 2px solid yellow;*/
 }
 
 .promo__wrapper {
@@ -22,16 +22,17 @@
   margin: 0 auto;
   padding: 0 20px;
 
-  outline: 2px solid pink;
+  /*outline: 2px solid pink;*/
 }
 
 .promo__title {
   margin: 0;
-  margin-bottom: 20px;
-  padding-top: 29px;
+  margin-bottom: 22px;
+  padding-top: 28px;
 
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
 }
 
 .promo__slogan {
@@ -40,35 +41,38 @@
 
   font-size: 14px;
   line-height: 14px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 .promo__product-image {
   margin: 0;
-  margin-top: 20px;
+  margin-top: 26px;
+  margin-bottom: 1px;
   padding: 0;
 }
 
 @media (min-width: @tablet-width) {
   .promo {
-    position: relative;
     width: 708px;
+    margin-bottom: 0;
 
     background-image: none;
-    outline: 2px solid brown;
+    /*outline: 2px solid brown;*/
   }
 
   .promo__wrapper {
+    position: relative;
     width: 708px;
     padding: 0;
-    outline: 2px solid blue;
+    /*outline: 2px solid blue;*/
   }
 
   .promo__title {
     width: 420px;
-    margin-left: 90px;
-    margin-bottom: 39px;
-    padding-top: 37px;
+    margin-left: 88px;
+    margin-bottom: 41px;
+    padding-top: 33px;
 
     font-family: "Oswald", "Arial", sans-serif;
     font-weight: 400;
@@ -81,7 +85,7 @@
   .promo__slogan {
     display: block;
     width: 420px;
-    margin-left: 90px;
+    margin-left: 89px;
 
     font-family: "Oswald", "Arial", sans-serif;
     font-weight: 400;
@@ -101,15 +105,17 @@
 
   .promo__button {
     position: absolute;
-    top: 263px;
-    left: 120px;
+    top: 262px;
+    left: 89px;
 
     width: 245px;
     padding-top: 16px;
     padding-bottom: 16px;
 
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 20px;
     line-height: 20px;
+    font-weight: 400;
   }
 }
 
@@ -118,29 +124,27 @@
     position: relative;
     width: 1440px;
     min-height: 696px;
-    margin-bottom: 80px;
+    margin-bottom: 82px;
     padding: 0;
 
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-position: right;
-    background-size: 720px 696px;
+    background-size: 721px 696px;
   }
 
   .promo__wrapper {
     width: 1220px;
     min-height: 641px;
     padding: 0 110px;
-    outline: 2px solid blue;
   }
 
   .promo__title {
     margin-left: 80px;
-    padding-top: 225px;
+    padding-top: 222px;
   }
 
   .promo__slogan {
     margin-left: 80px;
-    margin-top: 54px;
   }
 
   .promo__product-image {
@@ -157,8 +161,8 @@
 
   .promo__button {
     position: relative;
-    left: -407px;
-    top: 52px;
+    left: -408px;
+    top: 53px;
     /*top: 456px;
     left: 190px;*/
   }

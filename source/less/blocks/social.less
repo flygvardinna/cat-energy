@@ -1,9 +1,8 @@
 .social {
-  padding-top: 22px;
-  padding-bottom: 22px;
-
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  margin: 0;
+  padding: 0;
+  /*padding-top: 22px;
+  padding-bottom: 22px;*/
 }
 
 .social__list {
@@ -12,12 +11,24 @@
   width: 125px;
   margin: 0 auto;
   padding: 0;
+  padding-top: 22px;
 
   list-style: none;
 }
 
+
 @media (min-width: @tablet-width) {
   .social {
     border: none;
+  }
+  .social__list {
+    width: 136px;
+    margin: 0;
+    padding: 0;
+
+    vertical-align: middle;
+  }
+  .social-button {
+    width: 34px;
   }
 }

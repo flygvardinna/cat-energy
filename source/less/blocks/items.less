@@ -2,29 +2,31 @@
   width: 320px;
   box-sizing: border-box;
   margin: 0 auto;
-  outline: 2px solid pink;
+  padding-top: 28px;
 }
 
 .items__list {
-  height: 1673px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  outline: 2px solid green;
+  /*min-height: 1673px;*/
+  box-sizing: border-box;
 }
 
 @media (min-width: @tablet-width) {
   .items {
     width: 708px;
-    padding-top: 162px;
+    padding-top: 80px;
   }
 
   .items__list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: space-between;
     width: 708px;
-    height: 2145px;
+    min-height: 2229px; /*по макету 2226, но у меня пока не сходится*/
   }
 }
 
@@ -34,10 +36,7 @@
   }
 
   .items__list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     width: 1220px;
-    height: 1005px;
+    min-height: 1090px; /*тоже не сходится, в макете 1086px*/
   }
 }

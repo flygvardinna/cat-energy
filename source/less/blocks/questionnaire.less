@@ -1,12 +1,13 @@
 .questionnaire {
+  width: 320px;
   text-align: left;
   padding-top: 25px;
-  outline: 2px solid pink;
 }
 
 .questionnaire__intro {
-  /*margin-top: 25px;*/
-  margin-bottom: 20px;
+  width: 235px;
+  margin: 0;
+  margin-bottom: 39px;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -21,9 +22,7 @@
 .questionnaire__wrapper {
   margin: 0;
   padding-top: 0;
-  padding-bottom: 32px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-bottom: 31px;
 }
 
 .questionnaire__form {
@@ -38,6 +37,12 @@
 }
 
 .questionnaire__required {
+  display: inline-block;
+
+  width: 280px;
+  box-sizing: border-box;
+  margin: 21px 20px 0;
+
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
@@ -49,32 +54,61 @@
 
 @media (min-width: @tablet-width) {
   .questionnaire {
-    width: 633px;
-    height: 1699px;
-    padding-left: 40px;
-    padding-right: 35px;
-    padding-top: 53px;
+    width: 708px;
+    box-sizing: border-box;
+    padding-top: 55px;
   }
 
   .questionnaire__intro {
-    margin: 0;
+    width: 344px;
+    margin-bottom: 66px;
     padding: 0;
+    padding-left: 41px;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .questionnaire__wrapper {
     padding: 0;
     padding-bottom: 72px;
   }
+
+  .questionnaire__form {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .questionnaire__required {
+    float: right;
+
+    width: 324px;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: -35px;
+    padding: 0;
+
+    font-size: 16px;
+    text-align: left;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .questionnaire {
     width: 1220px;
-    height: 1303px;
+    /*height: 1303px;*/
+  }
+
+  .questionnaire__intro {
+    width: 325px;
     padding: 0;
   }
 
   .questionnaire__wrapper {
-    padding-bottom: 83px;
+    padding-bottom: 82px;
+  }
+
+  .questionnaire__required {
+    width: 570px;
   }
 }

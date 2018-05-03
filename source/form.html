@@ -7,12 +7,12 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--nav-closed page-header--nojs">
       <div class="page-header__topbar">
         <a class="page-header__logo">
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
         </a>
-        <button class="page-header__nav-toggle visually-hidden" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="page-header__nav-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
       <nav class="main-nav">
         <button class="main-nav__toggle visually-hidden" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -70,14 +70,16 @@
             </fieldset>
             <fieldset class="form__owners-contacts form-block">
               <legend class="form__title section-title">Контактные данные (владельца кота)</legend>
-              <p class="form__input-item">
-                <label class="form__label" for="email">E-mail:*</label>
-                <input class="form__input form__input--email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-              </p>
-              <p class="form__input-item">
-                <label class="form__label" for="tel">Телефон:*</label>
-                <input class="form__input form__input--tel" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-              </p>
+              <div class="form__contacts-wrapper">
+                <p class="form__input-item">
+                  <label class="form__label" for="email">E-mail:*</label>
+                  <input class="form__input form__input--email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                </p>
+                <p class="form__input-item">
+                  <label class="form__label" for="tel">Телефон:*</label>
+                  <input class="form__input form__input--tel" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                </p>
+              </div>
             </fieldset>
             <fieldset class="form__comments form-block">
               <legend class="form__title section-title">Комментарий</legend>
@@ -114,10 +116,10 @@
       <div class="page-footer__contacts contacts">
         <div class="contacts__info">
           <h2 class="visually-hidden">Контакты</h2>
-          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</p>
+          <b class="contacts__title">Приглашаем<br>к сотрудничеству дилеров!</b>
+          <p class="contacts__address"><span>ул. Большая Конюшенная, д. 19/8</span><br><span>Санкт-Петербург</span></p>
         </div>
-        <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта, где отмечен адрес ул. Большая Конюшенная, д. 19/8">
+        <div class="contacts__map"></div>
       </div>
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
@@ -128,7 +130,7 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#">
+              <a class="social__button social__button--vkontakte" href="#">
                 <span class="visually-hidden">ВКонтакте</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="12" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
                   <g>
@@ -153,7 +155,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">
+              <a class="social__button social__button--instagram" href="#">
                 <span class="visually-hidden">Инстаграм</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
                   <style type="text/css">
@@ -170,7 +172,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">
+              <a class="social__button social__button--facebook" href="#">
                 <span class="visually-hidden">Фейсбук</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="19" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
                   <g>
@@ -192,5 +194,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

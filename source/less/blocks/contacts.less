@@ -1,23 +1,22 @@
 .contacts {
   margin: 0;
 
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #444444;
-  text-align: left;
-
   background-color: #f2f2f2;
 }
 
 .contacts__info {
-  width: 280px;
-  padding-top: 29px;
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  box-sizing: border-box;
+  padding-top: 28px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 83px;
-  outline: 2px solid pink;
+  padding-bottom: 26px;
+
+  text-align: left;
+  /*padding-bottom: 83px;*/
+  /*outline: 2px solid pink;*/
 }
 
 .contacts__info--index {
@@ -25,41 +24,81 @@
 }
 
 .contacts__title {
-  float: left;
   width: 140px;
+  margin: 0;
+  padding: 0;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #111111;
-  text-align: left;
   text-transform: uppercase;
 }
 
 .contacts__address {
-  float: left;
+  width: 140px;
   margin: 0;
   padding: 0;
-  width: 140px;
+
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #444444;
+  text-align: left;
 }
 
 .contacts__map {
   width: 100%;
   height: 362px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #f2f2f2;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 @media (min-width: @tablet-width) {
   .contacts__info {
-    width: 624px;
-    height: 201px;
+    width: 768px;
+    min-height: 201px;
     padding-left: 72px;
     padding-right: 72px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 64px;
+    padding-bottom: 57px;
+  }
+
+  .contacts__title {
+    width: 158px;
+    padding-top: 2px;
+
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 158px;
+    min-height: 80px;
+
+    font-size: 16px;
+    text-align: right;
   }
 
   .contacts__map {
+    width: 100%;
     height: 396px;
+    margin: 0;
+    padding: 0;
+
+    /*background-image: url("../img/bg-map-mobile@1x.png");*/
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
 }
 
@@ -68,15 +107,22 @@
     position: absolute;
     top: 95px;
     left: 110px;
+
     width: 570px;
-    height: 201px;
     padding-left: 76px;
-    padding-right: 71px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-right: 87px;
+
+    background-color: #ffffff;
+  }
+
+  .contacts__address {
+    text-align: left;
   }
 
   .contacts__map {
-    height: 399px;
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/map-desktop.png");
+    background-position: top;
   }
 }

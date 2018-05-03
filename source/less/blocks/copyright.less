@@ -1,4 +1,6 @@
 .copyright {
+  margin: 0;
+  padding: 0;
   padding-top: 22px;
   padding-bottom: 22px;
 }
@@ -9,10 +11,26 @@
   line-height: 16px;
   color: #444444;
   text-decoration: none;
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .copyright__logo {
   float: right;
+  width: 27px;
+  height: 34px;
+}
 
-  vertical-align: middle;
+.copyright__logo path {
+  fill: #666666;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding: 0;
+
+    vertical-align: middle;
+  }
 }

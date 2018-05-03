@@ -40,13 +40,12 @@ img {
   width: 320px;
   margin: 0 auto;
   padding: 0;
-  outline: 2px solid yellow;
+  /*outline: 2px solid yellow;*/
 }
 
 .page-title {
   margin: 0;
-  padding-top: 17px;
-  padding-bottom: 27px;
+  padding-top: 15px;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -58,10 +57,13 @@ img {
 }
 
 .section-title {
+  position: relative;
+
   margin: 0;
+  padding-left: 19px;
   padding-right: 0;
-  padding-top: 30px;
-  padding-bottom: 33px;
+  padding-top: 28px;
+  padding-bottom: 34px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
@@ -71,14 +73,28 @@ img {
   text-align: left;
 }
 
+.section-title::after {
+  content: "";
+  position: absolute;
+  top: 42px;
+  right: 0;
+
+  width: 53px;
+  height: 3px;
+
+  background-color: #68b738;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
 .button {
   display: inline-block;
   width: 280px;
 
   margin: 0;
   padding: 0;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -92,9 +108,23 @@ img {
 
   background-color: #68b738;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #5eaa2f;
+  }
 }
 
 .button--index {
+  margin: 0;
+  padding-bottom: 12px;
+
   font-size: 14px;
   line-height: 18px;
 }
@@ -128,20 +158,59 @@ input[type="radio"].visually-hidden {
     width: 768px;
   }
 
-  .page-main--inner {
+  .page-main--inner { /*надо убрать, мешает делать псевдоэлементы у заголовков*/
     width: 708px;
     padding: 0 30px;
   }
 
   .page-title {
     margin: 0;
-    padding-top: 37px;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
+    padding-top: 33px;
 
     font-size: 60px;
     font-weight: 400;
+  }
+
+  .section-title {
+    padding-left: 38px;
+    padding-top: 67px;
+    padding-bottom: 80px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .section-title::before {
+    content: "";
+    position: absolute;
+    top: 89px;
+    left: -30px;
+
+    width: 28px;
+    height: 3px;
+
+    background-color: #68b738;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .section-title::after {
+    content: "";
+    position: absolute;
+    top: 89px;
+    right: -30px;
+
+    width: 327px;
+    height: 3px;
+
+    background-color: #68b738;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .button {
+    width: 249px;
   }
 }
 
@@ -160,11 +229,34 @@ input[type="radio"].visually-hidden {
 
   .page-title {
     margin: 0;
-    padding-top: 49px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
+    padding-top: 45px;
 
     font-size: 60px;
     font-weight: 400;
   }
+
+  .section-title {
+    padding-left: 0;
+    padding-top: 75px;
+  }
+
+  .section-title::before {
+    top: 97px;
+    left: -110px;
+
+    width: 70px;
+
+    background-color: #68b738;
+  }
+
+  .section-title::after {
+    top: 97px;
+    right: -110px;
+
+    width: 957px;
+
+    background-color: #68b738;
+  }
+
 }
