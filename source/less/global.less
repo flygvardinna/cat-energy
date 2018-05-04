@@ -156,7 +156,6 @@ input[type="radio"].visually-hidden {
   .page-main--inner {
     width: 708px;
     padding: 0 30px;
-    outline: 2px solid pink;
   }
 
   .page-title {
@@ -169,7 +168,7 @@ input[type="radio"].visually-hidden {
   }
 
   .section-title {
-    width: 708px;
+    /*width: 708px;*/
     padding: 0;
     margin: 0;
     margin-top: 67px;
@@ -179,7 +178,6 @@ input[type="radio"].visually-hidden {
     font-size: 36px;
     line-height: 36px;
     text-align: left;
-    outline: 2px solid yellow;
   }
 
   .section-title::before {
@@ -200,7 +198,7 @@ input[type="radio"].visually-hidden {
     content: "";
     position: relative;
     top: 5px;
-    right: -21px;
+    right: -30px;
 
     flex-grow: 1;
     flex-shrink: 0;
@@ -220,6 +218,7 @@ input[type="radio"].visually-hidden {
   body {
     position: relative;
     width: 1440px;
+    overflow: hidden;
   }
 
   .page-main {
@@ -229,6 +228,7 @@ input[type="radio"].visually-hidden {
 
   .page-main--inner {
     width: 1300px;
+    margin: 0 auto;
     box-sizing: border-box;
     padding-left: 40px;
     padding-right: 40px;
@@ -244,19 +244,18 @@ input[type="radio"].visually-hidden {
   }
 
   .section-title {
-    width: 1220px;
+    position: relative;
     margin-top: 76px;
+    padding: 0;
   }
 
   .section-title::before {
     content: "";
-    position: relative;
-    top: 5px;
-    left: -120px;
+    position: absolute;
+    width: 100vw;
+    top: 22px;
+    left: -110px;
 
-    flex-shrink: 0;
-
-    width: 70px;
     height: 3px;
 
     background-color: #68b738;
@@ -264,14 +263,11 @@ input[type="radio"].visually-hidden {
 
   .section-title::after {
     content: "";
-    position: relative;
-    top: 5px;
-    right: -70px;
+    position: absolute;
+    width: 100vw;
+    top: 22px;
+    left: 374px;
 
-    flex-grow: 1;
-    flex-shrink: 0;
-
-    width: 70px;
     height: 3px;
 
     background-color: #68b738;
