@@ -2,14 +2,14 @@
   font-weight: 400;
   font-family: "Oswald";
   font-style: normal;
-  src: url("fonts/oswaldregular.woff2") format("woff2"), url("fonts/oswaldregular.woff") format("woff");
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("fonts/oswaldregular.woff") format("woff");
 }
 
 @font-face {
   font-weight: 500;
   font-family: "Oswald";
   font-style: normal;
-  src: url("fonts/oswaldmedium.woff2") format("woff2"), url("fonts/oswaldmedium.woff") format("woff");
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("fonts/oswaldmedium.woff") format("woff");
 }
 
 body {
@@ -18,13 +18,6 @@ body {
   padding: 0;
 
   background-color: #ffffff;
-}
-
-@media (min-width: @desktop-width) {
-  body {
-    position: relative;
-    width: 1440px;
-  }
 }
 
 a {
@@ -57,13 +50,14 @@ img {
 }
 
 .section-title {
-  position: relative;
+  display: flex;
+  align-items: center;
 
   margin: 0;
   padding-left: 19px;
   padding-right: 0;
-  padding-top: 28px;
-  padding-bottom: 34px;
+  margin-top: 28px;
+  margin-bottom: 34px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
@@ -75,16 +69,17 @@ img {
 
 .section-title::after {
   content: "";
-  position: absolute;
-  top: 42px;
+  position: relative;
+  top: 4px;
   right: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
 
-  width: 53px;
+  width: 20px;
   height: 3px;
+  margin-left: 22px;
 
   background-color: #68b738;
-  background-position: 0 0;
-  background-repeat: no-repeat;
 }
 
 .button {
@@ -158,7 +153,7 @@ input[type="radio"].visually-hidden {
     width: 768px;
   }
 
-  .page-main--inner { /*надо убрать, мешает делать псевдоэлементы у заголовков*/
+  .page-main--inner {
     width: 708px;
     padding: 0 30px;
   }
@@ -173,40 +168,45 @@ input[type="radio"].visually-hidden {
   }
 
   .section-title {
-    padding-left: 38px;
-    padding-top: 67px;
-    padding-bottom: 80px;
+    width: 708px;
+    padding: 0;
+    margin: 0;
+    margin-top: 67px;
+    margin-bottom: 80px;
 
     font-size: 36px;
     line-height: 36px;
+    text-align: left;
+    outline: 2px solid yellow;
   }
 
   .section-title::before {
     content: "";
-    position: absolute;
-    top: 89px;
+    position: relative;
+    top: 5px;
     left: -30px;
+
+    flex-shrink: 0;
 
     width: 28px;
     height: 3px;
 
     background-color: #68b738;
-    background-position: 0 0;
-    background-repeat: no-repeat;
   }
 
   .section-title::after {
     content: "";
-    position: absolute;
-    top: 89px;
+    position: relative;
+    top: 5px;
     right: -30px;
 
-    width: 327px;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    width: 30px;
     height: 3px;
 
     background-color: #68b738;
-    background-position: 0 0;
-    background-repeat: no-repeat;
   }
 
   .button {
@@ -215,6 +215,11 @@ input[type="radio"].visually-hidden {
 }
 
 @media (min-width: @desktop-width) {
+  body {
+    position: relative;
+    width: 1440px;
+  }
+
   .page-main {
     width: 1440px;
     padding: 0;
@@ -237,24 +242,36 @@ input[type="radio"].visually-hidden {
   }
 
   .section-title {
+    width: 1220px;
+    margin-top: 75px;
     padding-left: 0;
-    padding-top: 75px;
   }
 
   .section-title::before {
-    top: 97px;
+    content: "";
+    position: relative;
+    top: 5px;
     left: -110px;
 
+    flex-shrink: 0;
+
     width: 70px;
+    height: 3px;
 
     background-color: #68b738;
   }
 
   .section-title::after {
-    top: 97px;
+    content: "";
+    position: relative;
+    top: 5px;
     right: -110px;
 
-    width: 957px;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    width: 110px;
+    height: 3px;
 
     background-color: #68b738;
   }
