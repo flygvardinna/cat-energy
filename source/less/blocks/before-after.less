@@ -17,7 +17,7 @@
   /*outline: 2px solid yellow;*/
 }
 
-.before-after__wrapper {
+.before-after__info-wrapper {
   width: 280px;
   margin-bottom: 34px;
   padding: 0 20px;
@@ -26,7 +26,7 @@
 .before-after__title {
   margin: 0;
   margin-bottom: 23px;
-  padding: 17px 20px 0;
+  padding-top: 17px;
   /*padding-left: 20px;
     padding-right: 25px;*/
 
@@ -58,6 +58,7 @@
 }
 
 .before-after__result {
+  position: relative;
   width: 124px;
   box-sizing: border-box;
 
@@ -82,10 +83,13 @@
 }
 
 .before-after__action {
+  position: absolute;
+  left: 18px;
+  bottom: -15px;
+
   display: inline-block;
   width: 88px;
   box-sizing: border-box;
-  margin-top: -15px;
   padding: 0 15px;
 
   font-size: 12px;
@@ -95,8 +99,10 @@
 }
 
 .before-after__cost {
-  width: 240px;
-  margin: 0 auto;
+  width: 197px;
+  margin-top: 34px;
+  margin-left: 42px;
+  margin-right: 41px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
@@ -116,17 +122,17 @@
 .before-after__buttons {
   display: flex;
   justify-content: space-between;
-  width: 230px;
+  width: 197px;
 
-  margin: 0 auto;
+  margin-left: 64px;
+  margin-right: 59px;
 
   background-image: url("../img/before-after-scale.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 55px;
 }
 
 .before-after__button {
-  width: 70px;
   padding: 0;
 
   font-family: "Oswald", "Arial", sans-serif;
@@ -138,6 +144,16 @@
 
   border: 0;
   background-color: #f2f2f2;
+}
+
+.before-after__button--before {
+  width: 37px;
+  margin-right: 18px;
+}
+
+.before-after__button--after {
+  width: 40px;
+  margin-left: 18px;
 }
 
 /*.before-after__button--before { если привязать картинки к кнопкам, то тогда wrapper можно сделать на весь блок, а не только на текст до картинки
@@ -180,23 +196,36 @@
 
     font-size: 16px;
     line-height: 24px;
-    outline: 2px solid yellow;
-  }
-
-  .before-after__wrapper {
-    width: 768px;
-    height: 283px;
-    box-sizing: border-box;
-    padding: 0 30px;
-    margin-bottom: 0;
 
     background-color: #ffffff;
-    /*outline: 2px solid pink;*/
+    background-image: linear-gradient(to right, #f2f2f2 385px, #eaeaea 385px);
+    background-size: 768px 462px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+
+  .before-after__info-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 768px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    margin-bottom: 86px;
+
+    background-color: #ffffff;
+
+    text-align: left;
   }
 
   .before-after__title {
+    width: 708px;
     margin: 0;
-    padding: 43px 30px 64px;
+    margin-top: 43px;
+    margin-bottom: 64px;
+    padding: 0;
 
     font-size: 60px;
 
@@ -204,8 +233,11 @@
   }
 
   .before-after__story {
+    width: 708px;
     margin: 0;
     margin-bottom: 53px;
+    padding: 0;
+    padding-right: 30px;
 
     font-size: 16px;
     line-height: 24px;
@@ -215,7 +247,7 @@
     display: flex;
     justify-content: space-between;
     width: 366px;
-    margin-bottom: 16px;
+    margin: 0;
   }
 
   .before-after__result {
@@ -232,15 +264,31 @@
 
   .before-after__action {
     display: inline-block;
-    width: 190px;
-    margin-top: -15px;
-    padding-bottom: 19px;
+    box-sizing: border-box;
+    padding: 0;
 
     font-size: 14px;
     line-height: 14px;
 
     background-color: #ffffff;
-    /*outline: 2px solid blue;*/
+  }
+
+  .before-after__action--weight {
+    position: absolute;
+    left: 24px;
+    bottom: -5px;
+
+    display: inline-block;
+    width: 114px;
+  }
+
+  .before-after__action--time {
+    position: absolute;
+    left: 10px;
+    bottom: -5px;
+
+    display: inline-block;
+    width: 142px;
   }
 
   .before-after__cost {
@@ -250,10 +298,10 @@
     justify-content: flex-end;
     align-content: space-between;
     width: 199px;
-    min-height: 50px;
+    min-height: 49px;
     margin: 0;
-    margin-top: -115px;
     margin-left: auto;
+    padding-top: 11px;
 
     font-size: 20px;
     line-height: 20px;
@@ -261,12 +309,13 @@
   }
 
   .before-after__cost span {
+    display: inline-block;
     width: 199px;
     height: 20px;
   }
 
   .before-after__cat-picture {
-    width: 677px;
+    width: 677px; /*размр картинок 690x517*/
     height: 517px;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -275,105 +324,149 @@
   .before-after__buttons {
     display: flex;
     justify-content: space-between;
-    width: 568px;
-    padding-left: 99px;
-    padding-right: 101px;
+    width: 570px;
+    margin-left: 98px;
+    margin-right: 100px;
 
     background-image: url("../img/before-after-scale-tablet.png");
     background-repeat: no-repeat;
-    background-position: center;
-
-    /*outline: 2px solid pink;*/
+    background-position: 71px 7px;
   }
 
   .before-after__button {
-    width: 45px;
     padding: 0;
     padding-bottom: 5px;
 
     font-size: 20px;
     border-bottom: 1px dotted #bebebe;
+  }
 
-    /*outline: 2px solid blue;*/
+  .before-after__button--before {
+    width: 47px;
+    margin-right: 24px;
+
+    background-color: #f2f2f2;
+  }
+
+  .before-after__button--after {
+    width: 50px;
+    margin-left: 21px;
+
+    background-color: #eaeaea;
   }
 }
 
 @media (min-width: @desktop-width) {
   .before-after {
+    display: flex;
+    justify-content: space-between;
     width: 1440px;
     box-sizing: border-box;
-    height: 597px; /*652*/
+    padding-left: 110px;
+    padding-right: 70px;
+    /*height: 597px; /*652*/
 
-    background-color: #f2f2f2;
+    background-color: #ffffff;
+    background-image: linear-gradient(to right, #f2f2f2 1045px, #eaeaea 1045px);
+    background-size: 1440px 462px;
+    background-position: bottom;
+    background-repeat: no-repeat;
   }
 
-  .before-after__wrapper {
-    width: 1440px;
-    height: 320px;
-    padding: 0 110px;
-
-    background-color: #f2f2f2;
+  .before-after__info-wrapper {
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    padding-top: 56px;
+    background-color: transparent;
   }
 
   .before-after__title {
+    width: 500px;
     margin: 0;
-    padding: 0 110px 75px; /* top 43*/
-
-    font-size: 60px;
-
-    background-color: #ffffff;
+    padding: 0;
+    margin-bottom: 145px;
   }
 
   .before-after__story {
-    width: 438px;
+    width: 500px;
     margin: 0;
+    padding: 0;
+    padding-right: 67px;
     margin-bottom: 68px;
-    padding-top: 71px;
+  }
 
-    font-size: 16px;
-    line-height: 24px;
+  .before-after__results {
+    margin-bottom: 60px;
+  }
+
+  .before-after__result {
+    margin: 0;
+    padding: 0;
   }
 
   .before-after__action {
-    display: inline-block;
-    width: 190px;
-    margin-top: -15px;
-    padding-bottom: 19px;
-
-    font-size: 14px;
-    line-height: 14px;
-
     background-color: #f2f2f2;
   }
 
-  .before-after__cost {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 326px;
-    height: 20px;
-    margin: 0;
+  .before-after__action--weight {
+    position: absolute;
+    left: 24px;
+    bottom: -5px;
 
-    font-size: 20px;
-    line-height: 20px;
-    text-align: right;
+    display: inline-block;
+    width: 114px;
+  }
+
+  .before-after__action--time {
+    position: absolute;
+    left: 10px;
+    bottom: -5px;
+
+    display: inline-block;
+    width: 142px;
+  }
+
+  .before-after__cost {
+    width: 366px;
+    min-height: 26px;
+    margin: 0;
+    padding: 0;
   }
 
   .before-after__cost span {
-    width: auto;
-    height: 20px;
+    display: inline-block;
+    height: auto;
+
+    text-align: left;
+  }
+
+  .before-after__cost span:first-of-type {
+    width: 237px;
+  }
+
+  .before-after__cost span:last-of-type {
+    width: 129px;
+  }
+
+  .before-after__cat-wrapper {
+    width: 690px;
   }
 
   .before-after__cat-picture {
-    display: none;
+    margin: 0;
+    margin-bottom: 42px;
   }
 
   .before-after__buttons {
+    display: flex;
+    justify-content: space-between;
     width: 570px;
-    padding-right: 115px;
-    margin: 0;
-    margin-left: auto;
-    margin-top: 50px;
+    margin-left: 80px;
+    margin-right: 40px;
+
+    background-image: url("../img/before-after-scale-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 70px 7px;
   }
 }
