@@ -1,19 +1,41 @@
 .show-more {
-  height: 210px;
+  /*height: 210px;*/
   box-sizing: border-box;
   margin: 0;
+  padding-left: 19px;
+  padding-right: 19px;
   padding-bottom: 24px;
-  padding-left: 20px;
-  padding-right: 20px;
+
+  text-align: center;
 
   border: 1px solid #ededed;
 }
 
 .show-more__container {
-  width: 231px;
-  margin: 0 auto 23px auto;
+  position: relative;
+
+  width: 240px;
+  margin: 0 auto;
   padding: 0;
-  padding-top: 80px;
+  padding-top: 79px;
+  padding-bottom: 21px;
+}
+
+.show-more__container::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  /*left: 105px;*/
+
+  width: 30px;
+  height: 30px;
+
+  transform: translateX(-50%);
+
+  background-image: url("../img/icon-plus-mobile.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .show-more__title {
@@ -27,11 +49,81 @@
 
 .show-more__text {
   display: inline-block;
-  padding-top: 10px;
+  padding-top: 7px;
 
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
   color: #444444;
-  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .show-more {
+    width: 324px;
+    height: 431px;
+    box-sizing: border-box;
+
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-bottom: 39px;
+
+    border: 1px solid #e6e6e6;
+  }
+
+  .show-more__container {
+    width: 195px;
+    padding: 0;
+    padding-top: 163px;
+    /*padding-top: 235px;*/
+  }
+
+  .show-more__container::before {
+    content: "";
+    position: absolute;
+    top: 54px;
+    left: 50%;
+    /*left: 105px;*/
+
+    width: 60px;
+    height: 60px;
+
+    transform: translateX(-50%);
+
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .show-more__title {
+    display: inline-block;
+    width: 140px;
+    margin: 0 auto;
+
+    font-size: 20px;
+  }
+
+  .show-more__text {
+    padding-top: 24px;
+    margin-bottom: 85px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .show-more {
+    width: 245px;
+    height: 432px;
+
+    border: 1px solid #e7e7e7;
+  }
+
+  .show-more__container {
+    width: 169px;
+  }
+
+  .show-more__button {
+    width: 169px;
+  }
 }

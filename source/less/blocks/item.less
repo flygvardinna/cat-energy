@@ -1,10 +1,15 @@
 .item {
-  height: 209px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  width: 320px;
+  /*min-height: 209px;*/
   box-sizing: border-box;
   margin: 0;
   padding-bottom: 24px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 19px;
+  padding-right: 19px;
 
   border-top: 1px solid #ededed;
   border-left: 1px solid #ededed;
@@ -12,57 +17,161 @@
 }
 
 .item__image {
-  float: left;
+  width: 140px;
+  height: 144px;
 }
 
-.item__link {
+.item__info {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  vertical-align: middle;
+}
+
+.item__name h3 {
+  width: 78px;
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: 12px;
+  padding: 0;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #111111;
   text-transform: uppercase;
-  text-align: left;
   text-decoration: none;
-}
-
-.item__name {
-  margin: 0;
-  padding: 0;
-  padding-top: 22px;
-
-  font: inherit;
+  text-align: left;
 }
 
 .item__description {
-  margin-top: 10px;
-  margin-bottom: 23px;
+  width: 140px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 23px;
 
   font-family: "Arial", sans-serif;
   font-size: 12px;
-  line-height: 12px; /* в макете 16px, но тогда не соответствует PP*/
+  line-height: 16px;
+  font-weight: 400;
   color: #444444;
+
+  border-collapse: collapse;
 }
 
 .item__field {
+  padding: 0;
   text-align: left;
 }
 
 .item__value {
+  padding: 0;
   text-align: right;
 }
 
 @media (min-width: @tablet-width) {
   .item {
+    display: flex;
+    flex-direction: column;
+
     width: 324px;
-    height: 431px;
+    height: 513px;
+    margin: 0;
+    padding: 0;
+    /*padding-bottom: 40px;*/
+
+    background-image: linear-gradient(to bottom, #ffffff 82px, #f2f2f2 82px);
+    background-repeat: no-repeat;
     border: none;
   }
+
+  .item__image--small {
+    width: 324px;
+    height: 208px; /*вообще 174px, но пусть пока будет так*/
+  }
+
+  .item__image--big {
+    width: 324px;
+    height: 208px;
+  }
+
+  .item__info {
+    width: 249px;
+    margin-left: 38px;
+    margin-right: 37px;
+    margin-top: 38px;
+  }
+
+  .item__name h3 {
+    width: 130px;
+    margin: 0 auto;
+    margin-bottom: 18px;
+    padding: 0;
+
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .item__description {
+    width: 249px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 33px;
+
+    font-size: 16px;
+  }
+
+  .item__description tr {
+    height: 32px;
+    box-sizing: border-box;
+
+    vertical-align: middle;
+
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .item__button {
+    margin-left: 38px;
+    margin-right: 37px;
+  }
 }
+
 
 @media (min-width: @desktop-width) {
   .item {
     width: 245px;
-    height: 432px;
+  }
+
+  .item__image--small {
+    width: 245px;
+  }
+
+  .item__image--big {
+    width: 245px;
+  }
+
+  .item__info {
+    width: 169px;
+    margin-left: 38px;
+    margin-right: 38px;
+  }
+
+  .item__name h3 {
+    margin-bottom: 17px;
+  }
+
+  .item__description {
+    width: 169px;
+  }
+
+  .item__button {
+    width: 169px;
+    margin-left: 38px;
+    margin-right: 38px;
   }
 }

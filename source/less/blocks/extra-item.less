@@ -1,12 +1,20 @@
 .extra-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 280px;
   margin: 0;
   padding-top: 13px;
   padding-bottom: 17px;
 
-  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
 }
 
-.extra-item__link {
+.extra-item__name {
+  width: 280px;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -17,7 +25,7 @@
   text-decoration: none;
 }
 
-.extra-item__name {
+.extra-item__name h3 {
   margin: 0;
   margin-bottom: 13px;
   padding: 0;
@@ -27,23 +35,119 @@
 
 .extra-item__weight {
   display: inline-block;
+  width: 218px;
   margin-bottom: 15px;
 
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
   color: #444444;
+  text-align: left;
 }
 
 .extra-item__price {
-  float: right;
-
   display: inline-block;
-  margin-bottom: 15px;
+  width: 62px;
 
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
   color: #444444;
   text-transform: uppercase;
+  text-align: right;
+}
+
+.extra-item__button {
+  width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .extra-item {
+    align-items: baseline;
+
+    width: 707px;
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 37px;
+    padding-right: 37px;
+
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .extra-item:last-of-type {
+    border-bottom: none;
+  }
+
+  .extra-item__name {
+    width: 346px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .extra-item__name h3 {
+    margin: 0;
+    padding: 0;
+
+    font: inherit;
+  }
+
+  .extra-item__weight {
+    width: 191px;
+    margin-bottom: 15px;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .extra-item__price {
+    width: 95px;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .extra-item__button {
+    margin-top: 7px;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-item {
+    width: 895px;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    padding-left: 0;
+    padding-right: 0;
+
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .extra-item__name {
+    width: 326px;
+  }
+
+  .extra-item__weight {
+    width: 245px;
+    margin: 0;
+
+    text-align: left;
+  }
+
+  .extra-item__price {
+    width: 80px;
+
+    text-align: left;
+  }
+
+  .extra-item__button {
+    margin: 0;
+    width: 244px;
+  }
 }

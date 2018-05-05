@@ -1,4 +1,6 @@
 .special-offer {
+  position: relative;
+
   width: 280px;
   min-height: 289px;
   margin: 0 auto;
@@ -15,27 +17,82 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: auto;
-  outline: 2px solid brown;
+  /*outline: 2px solid brown;*/
+}
+
+.special-offer::before {
+  content: "";
+  position: absolute;
+  top: 65px;
+  left: 50%;
+
+  width: 55px;
+  height: 60px;
+
+  transform: translateX(-50%);
+
+  background-image: url("../img/icon-gift.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .special-offer__description {
-  width: 170px;
+  width: 200px;
   margin: 0 auto;
-  padding-top: 190px;
+  padding-top: 187px;
+
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
   .special-offer {
     width: 708px;
-    height: 200px;
+    min-height: 200px;
+    margin: 0;
     margin-bottom: 76px;
+
+    background-size: cover;
+  }
+
+  .special-offer::before {
+    left: 92px;
+
+    transform: none;
+  }
+
+  .special-offer__description {
+    width: 170px;
+    margin: 0;
+    padding-left: 423px;
+    padding-right: 116px;
+    padding-top: 73px;
+
+    text-align: left;
   }
 }
 
 @media (min-width: @desktop-width) {
   .special-offer {
     width: 245px;
-    height: 288px;
-    margin-bottom: 0;
+    height: 289px;
+    margin: 0;
+
+    background-size: cover; /*надо что-то другое*/
+  }
+
+  .special-offer::before {
+    top: 65px;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  .special-offer__description {
+    width: 169px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 187px;
+
+    text-align: center;
   }
 }

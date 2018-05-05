@@ -1,71 +1,96 @@
 .page-footer {
   box-sizing: border-box;
   width: 320px;
-  height: 712px;
+  /*height: 712px;*/
   margin: 0 auto;
 
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #444444;
-  text-align: left;
-
   background-color: #f2f2f2;
-  outline: 2px solid yellow;
+  /*outline: 2px solid yellow;*/
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  min-height: 236px;
+  padding: 0 20px;
 }
 
 .page-footer__logo {
+  height: 94px;
+  box-sizing: border-box;
   padding-top: 39px;
-  padding-bottom: 31px;
   text-align: center;
+
+  /*outline: 2px solid pink;*/
 }
 
 .page-footer__social {
+  height: 64px;
+  box-sizing: border-box;
   padding: 0 20px;
+  padding-top: 22px;
+
+  text-align: center;
+
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  /*outline: 2px solid pink;*/
 }
 
 .page-footer__copyright {
-  padding: 0 20px;
+  height: 78px;
+  box-sizing: border-box;
+  padding: 22px 0;
+  /*outline: 2px solid pink;*/
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     width: 768px;
-    height: 747px;
+    /*height: 747px;*/
     margin: 0 auto;
-    padding: 0;
+    /*outline: 2px solid pink;*/
   }
 
   .page-footer__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 708px;
-    height: 145px; /*должно быть 150 по макету, но у меня какой-то косяк, не совпадает*/
+    min-height: 150px; /*145 - должно быть 150 по макету, но у меня какой-то косяк, не совпадает*/
     box-sizing: border-box;
     margin: 0 auto;
-    padding-top: 58px;
-    padding-bottom: 58px;
+    padding: 58px 0;
+    /*vertical-align: middle;*/
 
-    vertical-align: middle;
-
-    outline: 2px solid blue;
+    /*outline: 2px solid blue;*/
   }
 
   .page-footer__logo {
-    padding: 0;
     width: 162px;
+    height: 34px;
+    box-sizing: border-box;
+    padding: 0;
+    padding-top: 6px;
+
+    text-align: left;
   }
 
   .page-footer__social {
+    width: 136px; /*по 34 ширина каждой кнопки*/
+    height: 34px;
     padding: 0;
-    width: 162px;
   }
 
   .page-footer__copyright {
-    padding: 0;
     width: 162px;
+    height: 34px;
+    padding: 0;
+
+    text-align: left;
   }
 }
 
@@ -82,17 +107,5 @@
     margin: 0 auto;
     padding-top: 60px;
     padding-bottom: 56px;
-  }
-
-  .page-footer__logo {
-    width: 218px;
-  }
-
-  .page-footer__social {
-    width: 218px;
-  }
-
-  .page-footer__copyright {
-    width: 218px;
   }
 }
