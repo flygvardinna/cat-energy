@@ -80,10 +80,10 @@
     flex-direction: column;
 
     width: 324px;
-    height: 513px;
+    /*height: 513px;*/
     margin: 0;
     padding: 0;
-    /*padding-bottom: 40px;*/
+    padding-bottom: 40px;
 
     background-image: linear-gradient(to bottom, #ffffff 82px, #f2f2f2 82px);
     background-repeat: no-repeat;
@@ -92,10 +92,30 @@
 
   .item__image--small {
     width: 324px;
-    height: 208px; /*вообще 174px, но пусть пока будет так*/
+    height: 208px;
+    box-sizing: border-box;
+    padding-top: 34px;
+  }
+
+  .item:first-child .item__image--small {
+    padding-top: 36px;
+  }
+
+  .item__image--small img {
+    width: 324px;
+    height: 174px;
+  }
+
+  .item:first-child .item__image--small img {
+    height: 172px;
   }
 
   .item__image--big {
+    width: 324px;
+    height: 208px;
+  }
+
+  .item__image--big img {
     width: 324px;
     height: 208px;
   }
@@ -104,7 +124,7 @@
     width: 249px;
     margin-left: 38px;
     margin-right: 37px;
-    margin-top: 38px;
+    margin-top: 37px;
   }
 
   .item__name h3 {
@@ -141,13 +161,18 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {
   .item {
     width: 245px;
+
+    background-image: linear-gradient(to bottom, #ffffff 81px, #f2f2f2 81px);
   }
 
   .item__image--small {
+    width: 245px;
+  }
+
+  .item__image--small img {
     width: 245px;
   }
 
@@ -155,18 +180,24 @@
     width: 245px;
   }
 
+  .item__image--big img {
+    width: 245px;
+  }
+
   .item__info {
     width: 169px;
     margin-left: 38px;
     margin-right: 38px;
+    margin-top: 36px;
   }
 
   .item__name h3 {
-    margin-bottom: 17px;
+    margin-bottom: 18px;
   }
 
   .item__description {
     width: 169px;
+    margin-bottom: 33px;
   }
 
   .item__button {
