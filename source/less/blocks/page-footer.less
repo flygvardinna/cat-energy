@@ -26,13 +26,19 @@
   /*outline: 2px solid pink;*/
 }
 
+.page-footer__logo-link:hover,
+.page-footer__logo-link:focus {
+  opacity: 0.8;
+}
+
+.page-footer__logo-link:active {
+  opacity: 0.6;
+}
+
 .page-footer__social {
   height: 64px;
   box-sizing: border-box;
-  padding: 0 20px;
-  padding-top: 22px;
-
-  text-align: center;
+  margin: 0;
 
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
@@ -42,7 +48,6 @@
 .page-footer__copyright {
   height: 78px;
   box-sizing: border-box;
-  padding: 22px 0;
   /*outline: 2px solid pink;*/
 }
 
@@ -57,22 +62,23 @@
   .page-footer__wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 708px;
-    min-height: 150px; /*145 - должно быть 150 по макету, но у меня какой-то косяк, не совпадает*/
+    min-height: 150px;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 58px 0;
-    /*vertical-align: middle;*/
 
     /*outline: 2px solid blue;*/
   }
 
   .page-footer__logo {
-    width: 162px;
+    width: 128px;
     height: 34px;
     box-sizing: border-box;
+    margin: 0;
+    margin-right: 154px;
     padding: 0;
     padding-top: 6px;
 
@@ -82,12 +88,15 @@
   .page-footer__social {
     width: 136px; /*по 34 ширина каждой кнопки*/
     height: 34px;
+    margin: 0;
+    margin-right: auto;
     padding: 0;
   }
 
   .page-footer__copyright {
     width: 162px;
     height: 34px;
+    margin: 0;
     padding: 0;
 
     text-align: left;
@@ -105,7 +114,11 @@
   .page-footer__wrapper {
     width: 1220px;
     margin: 0 auto;
-    padding-top: 60px;
-    padding-bottom: 56px;
+    padding-top: 59px;
+    padding-bottom: 57px;
+  }
+
+  .page-footer__logo {
+    margin-right: 410px;
   }
 }

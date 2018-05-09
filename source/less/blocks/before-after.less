@@ -156,6 +156,10 @@
   margin-left: 18px;
 }
 
+.before-after__toggle {
+  display: none;
+}
+
 /*.before-after__button--before { если привязать картинки к кнопкам, то тогда wrapper можно сделать на весь блок, а не только на текст до картинки
   content: "";
   position: absolute;
@@ -328,6 +332,8 @@
   }
 
   .before-after__buttons {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
     width: 570px;
@@ -345,6 +351,15 @@
 
     font-size: 20px;
     border-bottom: 1px dotted #bebebe;
+    cursor: pointer;
+  }
+
+  .before-after__button:hover {
+    border-bottom: 1px solid #989898;
+  }
+
+  .before-after__button:active {
+    border-bottom: none;
   }
 
   .before-after__button--before {
@@ -359,6 +374,45 @@
     margin-left: 21px;
 
     background-color: #eaeaea;
+  }
+
+  .before-after__toggle {
+    position: absolute;
+    top: -7px;
+    left: 269px;
+
+    display: block;
+
+    width: 32px;
+    height: 32px;
+
+    background: #ffffff;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 1, 1, 0.15);
+    cursor: pointer;
+  }
+
+  .before-after__toggle:hover {
+    box-shadow: 0 3px 5px 0 rgba(0, 1, 1, 0.25);
+  }
+
+  .before-after__toggle:active {
+    border: 2px solid #68b738;
+    box-shadow: 0 4px 5px 0 rgba(0, 1, 1, 0.3);
+  }
+
+  .before-after__toggle::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: #68b738;
+    border-radius: 50%;
   }
 }
 
@@ -475,5 +529,9 @@
     background-image: url("../img/before-after-scale-tablet.png");
     background-repeat: no-repeat;
     background-position: 70px 7px;
+  }
+
+  .before-after__toggle {
+    left: 268px;
   }
 }
