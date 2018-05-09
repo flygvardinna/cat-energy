@@ -40,29 +40,33 @@
 }
 
 .form__input:active {
-  border: 2px solid #444444;
+  outline: 2px solid #444444;
 }
 
 .form__input:invalid {
-  border: 2px solid #ff8282;
+  outline: 2px solid #ff8282;
 }
 
-.form__input--email {
-  padding-right: 48px;
-
-  background-image: url("../img/icon-mail.svg");
-  background-size: 17px 13px;
-  background-position: 185px center;
-  background-repeat: no-repeat;
+.form__input-icon {
+  position: absolute;
+  fill: #222222;
 }
 
-.form__input--tel {
-  padding-right: 48px;
+.form__input-item--email .form__input-icon {
+  top: 16px;
+  right: 16px;
+}
 
-  background-image: url("../img/icon-phone.svg");
-  background-size: 20px 20px;
-  background-position: 170px center;
-  background-repeat: no-repeat;
+.form__input-item--phone .form__input-icon {
+  right: 13px;
+}
+
+.form__input:active + .form__input-icon {
+  fill: #68b738;
+}
+
+.form__input:invalid + .form__input-icon {
+  fill: #ff8282;
 }
 
 .form__input--comments {
@@ -92,6 +96,8 @@
 }
 
 .form__input-item {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -191,12 +197,9 @@
   border: solid 1px #bababa;
 }
 
-.form__radio:active + label::before {
-  border: solid 1px #ebebeb;
-}
-
+.form__radio:active + label::before,
 .form__radio + label:active {
-  color: rgba(34, 34, 34, 0.3);
+  opacity: 0.3;
 }
 
 .form__radio:checked + label::after {
@@ -323,12 +326,9 @@
   border: solid 1px #bababa;
 }
 
-.form__checkbox:active + label::before {
-  border: solid 1px #eaeaea;
-}
-
+.form__checkbox:active + label::before,
 .form__checkbox + label:active {
-  color: rgba(34, 34, 34, 0.3);
+  opacity: 0.3;
 }
 
 .form__checkbox:checked + label::after {
@@ -426,6 +426,16 @@
 
   .form__input[name="tel"] {
     width: 534px;
+  }
+
+  .form__input-item--email .form__input-icon {
+    top: 20px;
+    right: 21px;
+  }
+
+  .form__input-item--phone .form__input-icon {
+    top: 17px;
+    right: 18px;
   }
 
   .form__goals {
@@ -671,6 +681,14 @@
 
   .form__input[name="tel"] {
     width: 472px;
+  }
+
+  .form__input-item--email .form__input-icon {
+    right: 20px;
+  }
+
+  .form__input-item--phone .form__input-icon {
+    right: 19px;
   }
 
   .form__goals {
