@@ -164,7 +164,6 @@
   .before-after {
     box-sizing: border-box;
     width: 768px;
-    /*height: 1081px;*/
     margin: 0 auto;
     padding: 0;
     padding-bottom: 68px;
@@ -273,7 +272,6 @@
     justify-content: flex-end;
     align-content: space-between;
     width: 199px;
-    height: 49px;
     margin: 0;
     margin-left: auto;
     padding-top: 11px;
@@ -286,7 +284,10 @@
   .before-after__cost span {
     display: inline-block;
     width: 199px;
-    height: 20px;
+  }
+
+  .before-after__cost span:first-of-type {
+    margin-bottom: 10px;
   }
 
   .before-after__cat-picture {
@@ -305,8 +306,8 @@
   .before-after__buttons {
     position: relative;
 
-    /*display: flex;
-    justify-content: space-between;*/
+    display: flex;
+    justify-content: space-between;
     width: 570px;
     margin-left: 98px;
     margin-right: 100px;
@@ -415,7 +416,7 @@
     width: 500px;
     margin: 0;
     padding: 0;
-    margin-bottom: 145px;
+    margin-bottom: 142px;
   }
 
   .before-after__story {
@@ -423,11 +424,11 @@
     margin: 0;
     padding: 0;
     padding-right: 67px;
-    margin-bottom: 68px;
+    margin-bottom: 62px;
   }
 
   .before-after__results {
-    margin-bottom: 60px;
+    margin-bottom: 56px;
   }
 
   .before-after__result {
@@ -459,7 +460,6 @@
 
   .before-after__cost {
     width: 366px;
-    min-height: 26px;
     margin: 0;
     padding: 0;
   }
@@ -473,6 +473,7 @@
 
   .before-after__cost span:first-of-type {
     width: 237px;
+    margin-bottom: 0;
   }
 
   .before-after__cost span:last-of-type {
