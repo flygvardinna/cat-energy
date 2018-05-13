@@ -54,16 +54,6 @@ gulp.task("script", function() {
     .pipe(server.stream());
 });
 
-gulp.task("images", function() {
-  return gulp.src("build/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
-    ]))
-    .pipe(gulp.dest("build/img"));
-});
-
 gulp.task("serve", function() {
   server.init({
     server: "build/",
@@ -79,5 +69,5 @@ gulp.task("serve", function() {
 });
 
 gulp.task("build", function (done) {
-  run("clean", "copy", "style", "images", done);
+  run("clean", "copy", "style", done);
 });
