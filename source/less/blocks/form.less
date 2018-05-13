@@ -2,9 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 320px;
-
-  /*min-height: 1113px;*/
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 
@@ -14,7 +12,6 @@
   font-weight: 400;
   color: #222222;
   text-transform: uppercase;
-  /*outline: 2px solid green;*/
 }
 
 .form__input {
@@ -352,7 +349,6 @@
 @media (min-width: @tablet-width) {
   .form {
     width: 708px;
-    /*min-height: 1502px;*/
     font-size: 20px;
     line-height: 20px;
   }
@@ -421,7 +417,7 @@
   }
 
   .form__input[name="email"] {
-    width: 550px;
+    width: 549px;
   }
 
   .form__input[name="tel"] {
@@ -430,19 +426,18 @@
 
   .form__input-item--email .form__input-icon {
     top: 20px;
-    right: 21px;
+    right: 19px;
   }
 
   .form__input-item--phone .form__input-icon {
     top: 17px;
-    right: 18px;
+    right: 16px;
   }
 
   .form__goals {
     width: 630px;
     box-sizing: border-box;
     margin-left: 41px;
-    /*margin-bottom: 10px;*/
     padding: 0;
     padding-top: 33px;
     padding-left: 26px;
@@ -517,8 +512,8 @@
   }
 
   .form__title::before {
-    width: 29px;
-    left: -70px;
+    width: 30px;
+    left: -71px;
   }
 
   .form__title::after {
@@ -619,7 +614,6 @@
 @media (min-width: @desktop-width) {
   .form {
     width: 1220px;
-    /*min-height: 1095px;*/
   }
 
   .form__input--email {
@@ -737,6 +731,7 @@
   }
 
   .form__contacts-wrapper {
+    width: 1220px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -747,6 +742,10 @@
 
   .form__contacts-wrapper .form__input-item {
     width: 570px;
+  }
+
+  .form__input-item--phone {
+    margin-left: auto;
   }
 
   .form__comments {
@@ -787,7 +786,8 @@
   }
 
   .form__button {
-    width: 570px;
+    width: 568px;
     margin: 0;
+    margin-left: 1px;
   }
 }

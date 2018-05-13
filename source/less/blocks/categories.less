@@ -4,33 +4,35 @@
   padding: 0;
 
   background-color: #ffffff;
-  /*outline: 2px solid yellow;*/
 }
 
 .categories__list {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-between;
   width: 280px;
-  min-height: 552px;
   margin: 0;
   padding: 0 20px;
 
   list-style: none;
-  /*outline: 2px solid pink;*/
 }
 
 .categoties__item {
   position: relative;
 
-  flex-basis: 266px;
+  width: 280px;
   box-sizing: border-box;
   margin: 0;
+  margin-bottom: 20px;
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 
   background-color: #f2f2f2;
+}
+
+.categoties__item:last-of-type {
+  margin: 0;
 }
 
 .categoties__item::after {
@@ -156,29 +158,29 @@
 @media (min-width: @tablet-width) {
   .categories {
     width: 708px;
-    margin-top: -2px;
-    /*padding: 0 30px;*/
-    /*outline: 2px solid yellow;*/
   }
 
   .categories__list {
     width: 708px;
-    min-height: 774px;
     margin: 0;
     padding: 0;
-    /*outline: 2px solid pink;*/
   }
 
   .categoties__item {
     position: relative;
 
-    min-height: 372px;
+    width: 708px;
     margin: 0;
+    margin-bottom: 30px;
     padding-top: 76px;
     padding-left: 53px;
     padding-right: 53px;
 
     background-color: #f2f2f2;
+  }
+
+  .categoties__item:last-of-type {
+    margin: 0;
   }
 
   .categoties__item::after {
@@ -264,17 +266,17 @@
 
   .categories__list {
     flex-direction: row;
+    justify-content: space-between;
     width: 1220px;
-    min-height: 372px;
     margin: 0;
     padding: 0;
-    /*outline: 2px solid pink;*/
   }
 
   .categoties__item {
     position: relative;
 
     width: 570px;
+    margin: 0;
   }
 
   .categoties__item::after {
@@ -314,7 +316,7 @@
 
   .categories__description {
     width: 466px;
-    margin-bottom: 31px;
+    margin-bottom: 32px;
     padding: 0;
 
     font-size: 16px;

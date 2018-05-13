@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи. Подбор программы</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <svg style="display:none">
@@ -30,14 +32,14 @@
 
     <header class="page-header page-header--nav-closed page-header--nojs">
       <div class="page-header__topbar">
-        <a class="page-header__logo" href="index.html">
+        <a class="page-header__logo" href="index.html" aria-label="Ссылка на главную страницу">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
           </picture>
         </a>
-        <button class="page-header__nav-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="page-header__nav-toggle" type="button"><span class="visually-hidden">Открыть или закрыть меню</span></button>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
@@ -83,11 +85,11 @@
                   <label class="form__label" for="radio-slim">Похудение</label>
                 </li>
                 <li class="form__goal">
-                  <input class="form__radio" id="radio-pro" type="radio" name="goal" value="pro" checked>
+                  <input class="form__radio" id="radio-pro" type="radio" name="goal" value="pro">
                   <label class="form__label" for="radio-pro">Набор массы</label>
                 </li>
                 <li class="form__goal">
-                  <input class="form__radio" id="radio-advice" type="radio" name="goal" value="advice" checked>
+                  <input class="form__radio" id="radio-advice" type="radio" name="goal" value="advice">
                   <label class="form__label" for="radio-advice">Не знаю (нужен ваш совет)</label>
                 </li>
               </ul>
@@ -98,12 +100,12 @@
                 <p class="form__input-item form__input-item--email">
                   <label class="form__label" for="email">E-mail:*</label>
                   <input class="form__input" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
-                  <svg class="form__input-icon" width="17" height="13"><use xlink:href="#mail"></svg>
+                  <svg class="form__input-icon" width="17" height="13"><use xlink:href="#mail"></use></svg>
                 </p>
                 <p class="form__input-item form__input-item--phone">
                   <label class="form__label" for="tel">Телефон:*</label>
                   <input class="form__input" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90">
-                  <svg class="form__input-icon" width="20" height="20"><use xlink:href="#phone"></svg>
+                  <svg class="form__input-icon" width="20" height="20"><use xlink:href="#phone"></use></svg>
                 </p>
               </div>
             </fieldset>
@@ -145,11 +147,11 @@
           <b class="contacts__title">Приглашаем<br>к сотрудничеству дилеров!</b>
           <p class="contacts__address"><span>ул. Большая Конюшенная, д. 19/8</span><br><span>Санкт-Петербург</span></p>
         </div>
-        <div class="contacts__map"></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.3708413663899!2d30.322594385744896!3d59.93888615920926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1526121530999" width="320" height="362" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <a class="page-footer__logo-link">
+          <a class="page-footer__logo-link" href="index.html" aria-label="Ссылка на главную страницу">
             <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
           </a>
         </div>
@@ -158,7 +160,7 @@
             <li class="social__item social__item--vkontakte">
               <a href="#">
                 <span class="visually-hidden">ВКонтакте</span>
-                <svg class="social__icon social__icon--vkontakte" width="22" height="12"><use xlink:href="#icon-vk"></svg>
+                <svg class="social__icon social__icon--vkontakte" width="22" height="12"><use xlink:href="#icon-vk"></use></svg>
               </a>
             </li>
             <li class="social__item social__item--instagram">
@@ -170,7 +172,7 @@
             <li class="social__item social__item--facebook">
               <a href="#">
                 <span class="visually-hidden">Фейсбук</span>
-                <svg class="social__icon social__icon--facebook" width="10" height="19"><use xlink:href="#icon-fb"></svg>
+                <svg class="social__icon social__icon--facebook" width="10" height="19"><use xlink:href="#icon-fb"></use></svg>
               </a>
             </li>
           </ul>
@@ -178,11 +180,12 @@
         <div class="page-footer__copyright copyright">
           <a href="https://htmlacademy.ru/intensive/adaptive">
             <span>HTML Academy</span>
-            <svg class="copyright__logo" width="27" height="34"><use xlink:href="#htmlacademy"></svg>
+            <svg class="copyright__logo" width="27" height="34" aria-labelledby="academy-logo"><title id="academy-logo">логотип HTML Academy</title><use xlink:href="#htmlacademy"></use></svg>
           </a>
         </div>
       </div>
     </footer>
+    <script src="js/picturefill.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

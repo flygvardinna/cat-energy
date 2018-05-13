@@ -1,29 +1,24 @@
 .page-footer {
-  box-sizing: border-box;
   width: 320px;
-  /*height: 712px;*/
+  box-sizing: border-box;
   margin: 0 auto;
 
   background-color: #f2f2f2;
-  /*outline: 2px solid yellow;*/
 }
 
 .page-footer__wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-  min-height: 236px;
+  flex-wrap: wrap;
   padding: 0 20px;
 }
 
 .page-footer__logo {
-  height: 94px;
+  width: 320px;
   box-sizing: border-box;
-  padding-top: 39px;
-  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 27px;
 
-  /*outline: 2px solid pink;*/
+  text-align: center;
 }
 
 .page-footer__logo-link:hover,
@@ -36,27 +31,23 @@
 }
 
 .page-footer__social {
-  height: 64px;
+  width: 320px;
   box-sizing: border-box;
   margin: 0;
 
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
-  /*outline: 2px solid pink;*/
 }
 
 .page-footer__copyright {
-  height: 78px;
+  width: 320px;
   box-sizing: border-box;
-  /*outline: 2px solid pink;*/
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     width: 768px;
-    /*height: 747px;*/
     margin: 0 auto;
-    /*outline: 2px solid pink;*/
   }
 
   .page-footer__wrapper {
@@ -65,29 +56,24 @@
     justify-content: flex-start;
     align-items: center;
     width: 708px;
-    min-height: 150px;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 58px 0;
-
-    /*outline: 2px solid blue;*/
   }
 
   .page-footer__logo {
     width: 128px;
-    height: 34px;
     box-sizing: border-box;
     margin: 0;
     margin-right: 154px;
     padding: 0;
-    padding-top: 6px;
 
     text-align: left;
   }
 
   .page-footer__social {
-    width: 136px; /*по 34 ширина каждой кнопки*/
-    height: 34px;
+    width: 136px;
+    min-height: 34px;
     margin: 0;
     margin-right: auto;
     padding: 0;
@@ -95,7 +81,6 @@
 
   .page-footer__copyright {
     width: 162px;
-    height: 34px;
     margin: 0;
     padding: 0;
 
@@ -107,7 +92,6 @@
   .page-footer {
     position: relative;
     width: 1440px;
-    height: 549px;
     box-sizing: border-box;
   }
 
@@ -120,5 +104,6 @@
 
   .page-footer__logo {
     margin-right: 410px;
+    padding: 0;
   }
 }

@@ -1,5 +1,4 @@
 .show-more {
-  /*height: 210px;*/
   box-sizing: border-box;
   margin: 0;
   padding-left: 19px;
@@ -26,7 +25,6 @@
   position: absolute;
   top: 26px;
   left: 50%;
-  /*left: 105px;*/
 
   width: 30px;
   height: 30px;
@@ -60,12 +58,11 @@
 @media (min-width: @tablet-width) {
   .show-more {
     width: 324px;
-    height: 431px;
     box-sizing: border-box;
-
+    margin-bottom: 58px;
     padding-left: 37px;
     padding-right: 37px;
-    padding-bottom: 39px;
+    padding-bottom: 38px;
 
     border: 1px solid #e6e6e6;
   }
@@ -74,13 +71,12 @@
     width: 195px;
     padding: 0;
     padding-top: 163px;
-    /*padding-top: 235px;*/
   }
 
   .show-more__container::before {
     content: "";
     position: absolute;
-    top: 54px;
+    top: 52px;
     left: 99px;
 
     width: 60px;
@@ -101,7 +97,7 @@
 
   .show-more__text {
     padding-top: 24px;
-    margin-bottom: 85px;
+    margin-bottom: 86px;
 
     font-size: 16px;
     line-height: 18px;
@@ -111,7 +107,8 @@
 @media (min-width: @desktop-width) {
   .show-more {
     width: 245px;
-    height: 431px;
+    margin-bottom: 62px;
+    padding-bottom: 39px;
 
     border: 1px solid #e7e7e7;
   }
@@ -121,7 +118,12 @@
   }
 
   .show-more__container::before {
+    top: 51px;
     left: 85px;
+  }
+
+  .show-more__text {
+    margin-bottom: 85px;
   }
 
   .show-more__button {
