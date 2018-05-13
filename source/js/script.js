@@ -17,26 +17,26 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-catFatButton.addEventListener('click', function() {
-  if (catPicture.classList.contains('before-after__cat-slim')) {
-    catPicture.classList.remove('before-after__cat-slim');
-    catPicture.classList.add('before-after__cat-fat');
-  }
-});
-
-catSlimButton.addEventListener('click', function() {
-  if (catPicture.classList.contains('before-after__cat-fat')) {
-    catPicture.classList.remove('before-after__cat-fat');
-    catPicture.classList.add('before-after__cat-slim');
-  }
-});
-
-catToggle.addEventListener('click', function() {
-  if (catPicture.classList.contains('before-after__cat-fat')) {
-    catPicture.classList.remove('before-after__cat-fat');
-    catPicture.classList.add('before-after__cat-slim');
-  } else {
-    catPicture.classList.add('before-after__cat-fat');
-    catPicture.classList.remove('before-after__cat-slim');
-  }
-});
+if (catPicture) {
+  catFatButton.addEventListener('click', function() {
+    if (catPicture.classList.contains('before-after__cat-slim')) {
+      catPicture.classList.remove('before-after__cat-slim');
+      catPicture.classList.add('before-after__cat-fat');
+    }
+  });
+  catSlimButton.addEventListener('click', function() {
+    if (catPicture.classList.contains('before-after__cat-fat')) {
+      catPicture.classList.remove('before-after__cat-fat');
+      catPicture.classList.add('before-after__cat-slim');
+    }
+  });
+  catToggle.addEventListener('click', function() {
+    if (catPicture.classList.contains('before-after__cat-fat')) {
+      catPicture.classList.remove('before-after__cat-fat');
+      catPicture.classList.add('before-after__cat-slim');
+    } else {
+      catPicture.classList.add('before-after__cat-fat');
+      catPicture.classList.remove('before-after__cat-slim');
+    }
+  });
+};

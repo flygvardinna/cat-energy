@@ -56,10 +56,10 @@ img {
   position: relative;
 
   margin: 0;
-  padding-left: 19px;
-  padding-right: 0;
   margin-top: 28px;
   margin-bottom: 34px;
+  padding-left: 19px;
+  padding-right: 0;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
@@ -84,11 +84,8 @@ img {
 .button {
   display: inline-block;
   width: 280px;
-
   margin: 0;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -170,7 +167,6 @@ input[type="radio"].visually-hidden {
   .page-main--inner {
     width: 708px;
     padding: 0 30px;
-    line-height: 0;
   }
 
   .page-title {
@@ -230,7 +226,9 @@ input[type="radio"].visually-hidden {
 @media (min-width: @desktop-width) {
   body {
     position: relative;
+
     width: 1440px;
+
     overflow-x: hidden;
   }
 
@@ -241,8 +239,8 @@ input[type="radio"].visually-hidden {
 
   .page-main--inner {
     width: 1300px;
-    margin: 0 auto;
     box-sizing: border-box;
+    margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -262,8 +260,9 @@ input[type="radio"].visually-hidden {
   }
 
   .section-title::before {
-    width: 70px;
     left: -110px;
+
+    width: 70px;
   }
 
   .section-title::after {
