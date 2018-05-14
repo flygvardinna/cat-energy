@@ -120,39 +120,52 @@
 @media (min-width: @desktop-width) {
   .promo {
     position: relative;
-    width: 1440px;
+    width: 100%;
     min-height: 696px;
     margin-bottom: 80px;
     padding: 0;
+  }
 
-    background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, #ffffff 719px, #63a73a 719px);
-    background-position: 719px, left;
-    background-size: 720px 696px, 1440px;
+  .promo__cat-picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50%;
+    height: 696px;
+
+    background-color: #63a73a;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, #ffffff 719px, #63a73a 719px);
+      background-image: url("../img/index-background-desktop@2x.jpg");
     }
   }
 
   .promo__wrapper {
+    position: relative;
+
     width: 1220px;
     min-height: 641px;
-    padding: 0 110px;
+    margin: 0 auto;
   }
 
   .promo__title {
-    margin-left: 80px;
+    margin-left: 81px;
     padding-top: 222px;
   }
 
   .promo__slogan {
-    margin-left: 80px;
+    margin-left: 81px;
   }
 
   .promo__product-image {
     position: absolute;
     top: 142px;
-    right: 328px;
+    left: 450px;
     z-index: 2;
 
     width: 552px;
@@ -162,8 +175,8 @@
   }
 
   .promo__button {
-    position: relative;
-    left: -408px;
-    top: 53px;
+    position: absolute;
+    left: 80px;
+    top: 456px;
   }
 }

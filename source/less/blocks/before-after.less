@@ -388,16 +388,28 @@
 
 @media (min-width: @desktop-width) {
   .before-after {
-    display: flex;
-    justify-content: space-between;
-    width: 1440px;
-    box-sizing: border-box;
-    padding-left: 110px;
-    padding-right: 70px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 
     background-color: #ffffff;
-    background-image: linear-gradient(to right, #f2f2f2 1045px, #eaeaea 1045px);
-    background-size: 1440px 462px;
+    background-image: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+    background-size: 100% 462px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+
+  .before-after__container {
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-bottom: 68px;
+
+    background-image: linear-gradient(to right, #f2f2f2 975px, #eaeaea 975px);
+    background-size: 100% 462px;
     background-position: bottom;
     background-repeat: no-repeat;
   }
