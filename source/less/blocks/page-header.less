@@ -133,16 +133,20 @@
 @media (min-width: @desktop-width) {
   .page-header {
     width: 1300px;
+    margin: 0 auto;
     box-sizing: border-box;
     padding: 54px 40px 29px;
   }
 
   .page-header--index {
     position: absolute;
-    top: 0;
-    left: 70px;
-    right: 70px;
     z-index: 2;
+    left: 0;
+    right: 0;
+
+    width: 1300px;
+    box-sizing: border-box;
+    padding: 54px 40px 29px;
   }
 
   .page-header__topbar {

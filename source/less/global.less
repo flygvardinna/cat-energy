@@ -32,9 +32,9 @@ img {
 }
 
 .page-main {
-  width: 320px;
   margin: 0 auto;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .page-title {
@@ -55,10 +55,10 @@ img {
 .section-title {
   position: relative;
 
+  display: inline;
+
   margin: 0;
-  margin-top: 28px;
-  margin-bottom: 34px;
-  padding-left: 19px;
+  margin-left: 19px;
   padding-right: 0;
 
   font-family: "Oswald", "Arial", sans-serif;
@@ -72,8 +72,8 @@ img {
 .section-title::after {
   content: "";
   position: absolute;
-  top: 14px;
-  left: 267px;
+  bottom: 13px;
+  left: calc(100% + 10px);
 
   width: 100vw;
   height: 3px;
@@ -160,12 +160,8 @@ input[type="radio"].visually-hidden {
     font-size: 0;
   }
 
-  .page-main {
-    width: 768px;
-  }
-
   .page-main--inner {
-    width: 708px;
+    margin: 0 auto;
     padding: 0 30px;
   }
 
@@ -183,10 +179,8 @@ input[type="radio"].visually-hidden {
     position: relative;
 
     margin: 0;
-    margin-top: 9px;
-    margin-bottom: 80px;
+    margin-left: 37px;
     padding: 0;
-    padding-left: 38px;
 
     font-size: 36px;
     line-height: 36px;
@@ -197,22 +191,20 @@ input[type="radio"].visually-hidden {
   .section-title::after {
     content: "";
     position: absolute;
-    top: 22px;
+    bottom: 19px;
 
+    width: 100vw;
     height: 3px;
 
     background-color: #68b738;
   }
 
   .section-title::before {
-    width: 29px;
-    left: -31px;
+    right: calc(100% + 11.5px);
   }
 
   .section-title::after {
-    width: 100vw;
-
-    left: 411px;
+    left: calc(100% + 11px);
 
     margin: 0;
     padding: 0;
@@ -224,21 +216,11 @@ input[type="radio"].visually-hidden {
 }
 
 @media (min-width: @desktop-width) {
-  body {
-    position: relative;
-
-    width: 1440px;
-
-    overflow-x: hidden;
-  }
-
   .page-main {
-    width: 1440px;
-    padding: 0;
+    width: 100%;
   }
 
   .page-main--inner {
-    width: 1300px;
     box-sizing: border-box;
     margin: 0 auto;
     padding-left: 40px;
@@ -255,17 +237,15 @@ input[type="radio"].visually-hidden {
   }
 
   .section-title {
-    margin-top: 13px;
+    margin-left: 0;
     padding: 0;
   }
 
   .section-title::before {
-    left: -110px;
-
-    width: 70px;
+    right: calc(100% + 12px);
   }
 
   .section-title::after {
-    left: 373px;
+    left: calc(100% + 11px);
   }
 }
