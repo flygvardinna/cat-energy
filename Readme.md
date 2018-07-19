@@ -2,6 +2,7 @@
 
 Вёрстка трёх страниц интернет-магазина спортивного питания для котов Cat Energy ([главная](https://htmlacademy-adaptive.github.io/614941-cat-energy/11/index.html), [каталог](https://htmlacademy-adaptive.github.io/614941-cat-energy/11/catalog.html), [страница с формой](https://htmlacademy-adaptive.github.io/614941-cat-energy/11/form.html)).
 Адаптивность (мобильная, планшетная, десктопная версии). Сетка на флексбоксах, адаптивная графика, дополнительно ретиновая.
+JS используется для меню (мобильная версия) и смены фотографий кота на главной. 
 Кроссбраузерность: Chrome, Firefox, Opera, Edge и IE11.
 Использованы: именование классов по БЭМ, препроцессор Less, автоматизация на Gulp.
 
