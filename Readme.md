@@ -1,4 +1,4 @@
-# CAT ENERGY [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# CAT ENERGY
 
 Вёрстка трёх страниц интернет-магазина спортивного питания для котов Cat Energy ([главная](https://htmlacademy-adaptive.github.io/614941-cat-energy/11/index.html), [каталог](https://htmlacademy-adaptive.github.io/614941-cat-energy/11/catalog.html), [страница с формой](https://htmlacademy-adaptive.github.io/614941-cat-energy/11/form.html)).
 Адаптивность (мобильная, планшетная, десктопная версии). Сетка на флексбоксах, адаптивная графика, дополнительно ретиновая.
