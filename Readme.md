@@ -1,6 +1,6 @@
 # CAT ENERGY
 
-Вёрстка трёх страниц интернет-магазина спортивного питания для котов Cat Energy ([главная](https://flygvardinna.github.io/cat-energy), [каталог](https://flygvardinna.github.io/cat-energy/catalog.html), [страница с формой](https://flygvardinna.github.io/cat-energy/form.html)).
+Вёрстка трёх страниц интернет-магазина спортивного питания для котов Cat Energy ([главная](https://flygvardinna.github.io/cat-energy/index.html), [каталог](https://flygvardinna.github.io/cat-energy/catalog.html), [страница с формой](https://flygvardinna.github.io/cat-energy/form.html)).
 Адаптивность (мобильная, планшетная, десктопная версии). Сетка на флексбоксах, адаптивная графика, дополнительно ретиновая.
 Кроссбраузерность: Chrome, Firefox, Opera, Edge и IE11.
 Использованы: именование классов по БЭМ, препроцессор Less, автоматизация на Gulp.
