@@ -43,6 +43,10 @@
   },
   "dependencies": {
     "debug": "^3.1.0",
-    "lodash": "^4.17.13"
+    "lodash": "^4.17.13",
+    "lodash.template": ">=4.5.0",
+    "deep-extend": ">=0.5.1",
+    "merge": ">=1.2.1",
+    "braces": ">=2.3.1"
   }
 }
